@@ -1,1 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Email Classification System | Kirby Eduave</title>
+
+    <meta
+        name="description"
+        content="Case study of an automated email classification workflow built with n8n, Gmail, Google Sheets, and Slack."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+                Kirby Eduave
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="container">
+
+            <p class="project-type">
+                EMAIL AUTOMATION
+            </p>
+
+            <h1>
+                Email Classification System
+            </h1>
+
+            <p class="project-intro">
+                An automated workflow that processes incoming emails,
+                categorizes them, records the results, handles errors,
+                and sends notifications to the appropriate channel.
+            </p>
+
+            <div class="project-tools">
+                <span>n8n</span>
+                <span>Gmail</span>
+                <span>Google Sheets</span>
+                <span>Slack</span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Overview -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>
+                Automating the first steps of email processing.
+            </h2>
+
+            <p>
+                Businesses can receive a large number of emails that need
+                to be reviewed, categorized, recorded, and routed to the
+                appropriate person or team.
+            </p>
+
+            <p>
+                I built this workflow to automate the initial processing
+                of incoming emails and create a structured record of each
+                message.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Problem -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">THE PROBLEM</p>
+
+            <h2>
+                Manual email processing can be repetitive.
+            </h2>
+
+            <p>
+                Without an automated process, every incoming email may
+                require someone to manually identify the message,
+                determine its category, record it, and notify the
+                appropriate team.
+            </p>
+
+            <p>
+                This can lead to repetitive work and makes it harder to
+                maintain a consistent record of incoming requests.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Workflow -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">THE WORKFLOW</p>
+
+            <h2>
+                From incoming email to organized record.
+            </h2>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <span>01</span>
+                    <h3>Receive Email</h3>
+                    <p>
+                        A new email triggers the workflow.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>02</span>
+                    <h3>Check for Duplicates</h3>
+                    <p>
+                        The workflow checks whether the message has
+                        already been processed.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>03</span>
+                    <h3>Record Message</h3>
+                    <p>
+                        Relevant email information is stored in
+                        Google Sheets.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>04</span>
+                    <h3>Classify</h3>
+                    <p>
+                        The email is categorized based on its content.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>05</span>
+                    <h3>Update Record</h3>
+                    <p>
+                        The classification is written back to the
+                        tracking sheet.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>06</span>
+                    <h3>Notify</h3>
+                    <p>
+                        A notification is sent through Slack.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Categories -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">CLASSIFICATION</p>
+
+            <h2>
+                Organizing emails into useful categories.
+            </h2>
+
+            <p>
+                The workflow separates incoming messages into predefined
+                categories so that they can be handled more efficiently.
+            </p>
+
+            <div class="category-grid">
+
+                <div class="category-card">
+                    <h3>Billing</h3>
+                    <p>
+                        Questions and requests related to billing,
+                        payments, or charges.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>Technical Support</h3>
+                    <p>
+                        Technical issues and troubleshooting requests.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>Account Management</h3>
+                    <p>
+                        Account-related questions and requests.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>Sales</h3>
+                    <p>
+                        Sales inquiries and potential customer requests.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>Fallback</h3>
+                    <p>
+                        Messages that do not clearly fit another
+                        category.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Error Handling -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">ERROR HANDLING</p>
+
+            <h2>
+                Designing for failures, not just successful runs.
+            </h2>
+
+            <p>
+                The workflow includes a separate error-handling path
+                for classification failures. Instead of silently
+                losing a message when an error occurs, the workflow
+                records the failure for review.
+            </p>
+
+            <p>
+                This makes troubleshooting easier and provides a
+                record of messages that require additional attention.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Key Features -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">KEY FEATURES</p>
+
+            <h2>
+                What the workflow handles.
+            </h2>
+
+            <div class="feature-list">
+
+                <div class="feature">
+                    <h3>Automated Trigger</h3>
+                    <p>
+                        New Gmail messages automatically start the workflow.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h3>Duplicate Detection</h3>
+                    <p>
+                        Previously processed messages can be identified
+                        using their message ID.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h3>Centralized Tracking</h3>
+                    <p>
+                        Email information and classification results are
+                        stored in Google Sheets.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h3>Error Logging</h3>
+                    <p>
+                        Classification failures are recorded separately
+                        for troubleshooting.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <h3>Slack Notifications</h3>
+                    <p>
+                        Processed messages can trigger notifications
+                        for the relevant team.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Tools -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>
+                Technologies used.
+            </h2>
+
+            <div class="project-tools large-tools">
+
+                <span>n8n</span>
+                <span>Gmail</span>
+                <span>Google Sheets</span>
+                <span>Slack</span>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Result -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">RESULT</p>
+
+            <h2>
+                A repeatable process for incoming email.
+            </h2>
+
+            <p>
+                The finished workflow turns incoming emails into
+                structured records, applies a consistent classification
+                process, handles duplicate and error scenarios, and
+                provides notifications for visibility.
+            </p>
+
+            <p>
+                The project demonstrates how workflow automation can
+                be used to reduce repetitive administrative tasks while
+                maintaining a clear record of what happened during
+                each processing step.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Back to Projects -->
+    <section class="project-navigation">
+        <div class="container">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <p>
+                © 2026 Kirby Eduave. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
