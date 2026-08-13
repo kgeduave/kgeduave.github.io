@@ -1,1 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Expense Approval Workflow | Kirby Eduave</title>
+
+    <meta
+        name="description"
+        content="Case study of an automated expense approval workflow built with n8n, Google Forms, Google Sheets, Gmail, and webhooks."
+    >
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+
+            <a href="../index.html" class="logo">
+                Kirby Eduave
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="container">
+
+            <p class="project-type">
+                WORKFLOW AUTOMATION
+            </p>
+
+            <h1>
+                Expense Approval Workflow
+            </h1>
+
+            <p class="project-intro">
+                An automated expense management workflow that handles
+                expense submissions, validation, approval routing,
+                rejection, tracking, and employee notifications.
+            </p>
+
+            <div class="project-tools">
+                <span>n8n</span>
+                <span>Google Forms</span>
+                <span>Google Sheets</span>
+                <span>Gmail</span>
+                <span>Webhooks</span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Overview -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>
+                Automating the expense approval process.
+            </h2>
+
+            <p>
+                Expense requests often require multiple steps before they
+                can be approved and recorded. Someone needs to review the
+                submission, determine the appropriate approver, communicate
+                the decision, and keep the expense tracker updated.
+            </p>
+
+            <p>
+                I designed this workflow to automate these steps while
+                maintaining a centralized record of each expense request.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Problem -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">THE PROBLEM</p>
+
+            <h2>
+                Expense requests can involve repetitive manual work.
+            </h2>
+
+            <p>
+                A manual expense approval process can require employees
+                and managers to repeatedly exchange emails, check
+                information, update spreadsheets, and communicate
+                approval decisions.
+            </p>
+
+            <p>
+                Without a consistent workflow, it can also become difficult
+                to track the current status of each request.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Workflow -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">THE WORKFLOW</p>
+
+            <h2>
+                From expense submission to final decision.
+            </h2>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <span>01</span>
+
+                    <h3>Submit Expense</h3>
+
+                    <p>
+                        An employee submits an expense request through
+                        a Google Form.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>02</span>
+
+                    <h3>Validate Submission</h3>
+
+                    <p>
+                        The workflow checks the submitted information
+                        before processing the request.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>03</span>
+
+                    <h3>Generate Expense ID</h3>
+
+                    <p>
+                        A unique Expense ID is generated so the request
+                        can be tracked throughout the workflow.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>04</span>
+
+                    <h3>Store Request</h3>
+
+                    <p>
+                        The expense information is recorded in the
+                        master Google Sheet.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>05</span>
+
+                    <h3>Determine Approver</h3>
+
+                    <p>
+                        The expense amount determines the appropriate
+                        approval path.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>06</span>
+
+                    <h3>Request Approval</h3>
+
+                    <p>
+                        The designated approver receives the expense
+                        information and approval options.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>07</span>
+
+                    <h3>Process Decision</h3>
+
+                    <p>
+                        The workflow processes either an approval or
+                        rejection response.
+                    </p>
+                </div>
+
+
+                <div class="workflow-step">
+                    <span>08</span>
+
+                    <h3>Update & Notify</h3>
+
+                    <p>
+                        The expense record is updated and the employee
+                        is notified of the result.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Approval Routing -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">APPROVAL ROUTING</p>
+
+            <h2>
+                Different expenses can follow different approval paths.
+            </h2>
+
+            <p>
+                The workflow can determine the appropriate approver based
+                on the expense amount.
+            </p>
+
+            <div class="category-grid">
+
+                <div class="category-card">
+
+                    <h3>Manager Approval</h3>
+
+                    <p>
+                        Expenses below the configured threshold are routed
+                        to the appropriate manager.
+                    </p>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <h3>Department Head</h3>
+
+                    <p>
+                        Higher-value expenses are routed to a department
+                        head for additional approval.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Approval & Rejection -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">DECISION PROCESS</p>
+
+            <h2>
+                Approval and rejection follow separate paths.
+            </h2>
+
+            <p>
+                The workflow provides the approver with a clear way to
+                approve or reject an expense request.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature">
+
+                    <h3>Approval</h3>
+
+                    <p>
+                        An approved request is recorded in the master
+                        tracker and the employee receives a notification
+                        confirming the decision.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Rejection</h3>
+
+                    <p>
+                        A rejected request is recorded with the rejection
+                        information and the employee is notified of the
+                        decision.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Webhook / Wait -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">WORKFLOW CONTROL</p>
+
+            <h2>
+                Waiting for an approval decision.
+            </h2>
+
+            <p>
+                The workflow needs to pause while waiting for an approver
+                to make a decision. A webhook-based approval mechanism
+                allows the workflow to resume when the approver selects
+                an available action.
+            </p>
+
+            <p>
+                This separates the initial expense submission from the
+                eventual approval decision without requiring the entire
+                process to be completed in a single interaction.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Key Features -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">KEY FEATURES</p>
+
+            <h2>
+                What the workflow handles.
+            </h2>
+
+            <div class="feature-list">
+
+                <div class="feature">
+
+                    <h3>Expense Validation</h3>
+
+                    <p>
+                        Submitted information is checked before the request
+                        continues through the workflow.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Unique Expense IDs</h3>
+
+                    <p>
+                        Each request receives an identifier that can be
+                        used to track it throughout the process.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Approval Routing</h3>
+
+                    <p>
+                        The expense amount determines the appropriate
+                        approval path.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Approval & Rejection</h3>
+
+                    <p>
+                        Separate decision paths allow approved and rejected
+                        requests to be processed appropriately.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Centralized Tracking</h3>
+
+                    <p>
+                        Expense information and status updates are stored
+                        in a master Google Sheet.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>Employee Notifications</h3>
+
+                    <p>
+                        Employees receive an email when their expense
+                        request has been processed.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Tools -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>
+                Technologies used.
+            </h2>
+
+            <div class="project-tools large-tools">
+
+                <span>n8n</span>
+                <span>Google Forms</span>
+                <span>Google Sheets</span>
+                <span>Gmail</span>
+                <span>Webhooks</span>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Result -->
+    <section class="project-section">
+        <div class="container">
+
+            <p class="section-label">RESULT</p>
+
+            <h2>
+                A structured process for managing expense requests.
+            </h2>
+
+            <p>
+                The finished workflow creates a consistent process from
+                expense submission through approval or rejection, while
+                maintaining a centralized record of each request.
+            </p>
+
+            <p>
+                The project demonstrates how workflow automation can
+                connect forms, spreadsheets, email, and webhooks to
+                reduce repetitive administrative work and improve
+                process visibility.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Back to Projects -->
+    <section class="project-navigation">
+        <div class="container">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <p>
+                © 2026 Kirby Eduave. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
