@@ -1,42 +1,330 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirby Eduave | Portfolio</title>
+
+    <title>Kirby Eduave | Virtual Assistant & Workflow Automation</title>
+
+    <meta 
+        name="description" 
+        content="Portfolio of Kirby Eduave, showcasing virtual assistance, administrative support, and workflow automation projects."
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Kirby Eduave</h1>
-        <p>Virtual Assistant | Automation | Administrative Support</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Kirby Eduave</a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+
+            <p class="hero-label">VIRTUAL ASSISTANT • WORKFLOW AUTOMATION</p>
+
+            <h1>
+                Hi, I'm Kirby.
+            </h1>
+
+            <h2>
+                I help businesses organize work and automate repetitive processes.
+            </h2>
+
+            <p class="hero-description">
+                I have experience in customer service, transaction processing,
+                administrative support, and workflow automation. I build practical
+                systems that make everyday business processes more efficient.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects">View My Projects</a>
+                <a href="#contact">Get In Touch</a>
+            </div>
+
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+
+            <p class="section-label">ABOUT ME</p>
+
+            <h2>Turning experience into better workflows.</h2>
+
             <p>
-                Welcome to my portfolio. Here you can find my experience,
-                skills, and selected projects.
+                I have several years of experience working in customer service
+                and transaction processing, where accuracy, organization, and
+                attention to detail were essential.
             </p>
-        </section>
 
-        <section>
-            <h2>Projects</h2>
+            <p>
+                More recently, I've been developing workflow automation solutions
+                using tools such as n8n, Google Workspace, webhooks, and
+                communication platforms.
+            </p>
 
-            <article>
-                <h3>Expense Approval Workflow</h3>
-                <p>
-                    An automated expense approval workflow built with n8n,
-                    Google Sheets, email, and webhooks.
-                </p>
+            <p>
+                My goal is to combine my administrative experience with
+                automation to help businesses reduce repetitive work and
+                improve their processes.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+
+            <p class="section-label">SKILLS</p>
+
+            <h2>What I work with</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3>Administrative</h3>
+
+                    <ul>
+                        <li>Data Entry</li>
+                        <li>Transaction Processing</li>
+                        <li>Documentation</li>
+                        <li>Scheduling</li>
+                        <li>Email Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools</h3>
+
+                    <ul>
+                        <li>Google Workspace</li>
+                        <li>Microsoft Office</li>
+                        <li>Google Sheets</li>
+                        <li>Slack</li>
+                        <li>Zendesk</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Automation</h3>
+
+                    <ul>
+                        <li>n8n</li>
+                        <li>Workflow Design</li>
+                        <li>Webhooks</li>
+                        <li>API Integrations</li>
+                        <li>Process Automation</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+
+            <p class="section-label">PROJECTS</p>
+
+            <h2>Things I've built.</h2>
+
+            <p>
+                A selection of workflow automation projects I've created to
+                solve practical business problems.
+            </p>
+
+
+            <!-- Project 1 -->
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <p class="project-type">WORKFLOW AUTOMATION</p>
+
+                    <h3>Expense Approval Workflow</h3>
+
+                    <p>
+                        An automated expense submission and approval system
+                        designed to organize requests, route them to the
+                        appropriate approver, and notify employees of the result.
+                    </p>
+
+                    <div class="project-tools">
+                        <span>n8n</span>
+                        <span>Google Forms</span>
+                        <span>Google Sheets</span>
+                        <span>Gmail</span>
+                        <span>Webhooks</span>
+                    </div>
+
+                    <a href="projects/expense-approval.html">
+                        View Case Study →
+                    </a>
+
+                </div>
+
             </article>
 
-        </section>
-    </main>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <p class="project-type">EMAIL AUTOMATION</p>
+
+                    <h3>Email Classification System</h3>
+
+                    <p>
+                        An automated email processing workflow that identifies
+                        incoming messages, categorizes them, records the results,
+                        handles errors, and sends notifications.
+                    </p>
+
+                    <div class="project-tools">
+                        <span>n8n</span>
+                        <span>Gmail</span>
+                        <span>Google Sheets</span>
+                        <span>Slack</span>
+                    </div>
+
+                    <a href="projects/email-classifier.html">
+                        View Case Study →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+
+            <p class="section-label">EXPERIENCE</p>
+
+            <h2>Professional experience</h2>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    2020 – 2024
+                </div>
+
+                <div class="experience-content">
+                    <h3>Advisor II — Transaction Processing</h3>
+                    <h4>Concentrix</h4>
+
+                    <p>
+                        Processed transactions while maintaining accuracy,
+                        following established procedures, and handling
+                        customer and account information.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    2018 – 2019
+                </div>
+
+                <div class="experience-content">
+                    <h3>Customer Care Associate</h3>
+                    <h4>Global Continuum</h4>
+
+                    <p>
+                        Provided customer support while resolving inquiries,
+                        documenting interactions, and following service
+                        procedures.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+
+            <p class="section-label">CONTACT</p>
+
+            <h2>Let's work together.</h2>
+
+            <p>
+                I'm interested in opportunities involving virtual assistance,
+                administrative support, and workflow automation.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:YOUR_EMAIL@example.com">
+                    Email Me
+                </a>
+
+                <a href="https://github.com/kgeduave" target="_blank">
+                    GitHub
+                </a>
+
+                <!-- Add LinkedIn URL here later -->
+                <!--
+                <a href="YOUR_LINKEDIN_URL" target="_blank">
+                    LinkedIn
+                </a>
+                -->
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <p>
+                © 2026 Kirby Eduave. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
