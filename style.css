@@ -335,6 +335,19 @@ section > .container > p {
     transform: translateX(5px);
 }
 
+/* PROJECT PAGE IMAGES */
+
+.project-image {
+    display: block;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 3rem auto;
+
+    border: 1px solid #292929;
+    border-radius: 10px;
+}
 
 /* =========================================
    EXPERIENCE
